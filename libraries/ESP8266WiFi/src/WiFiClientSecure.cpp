@@ -119,6 +119,8 @@ public:
     void stop()
     {
         s_io_ctx = nullptr;
+        ssl_free(_ssl);
+        _ssl = nullptr;
     }
 
     bool connected()
