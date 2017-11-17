@@ -354,6 +354,7 @@ protected:
             if (!_datasource->available() || _is_timeout() || state() == CLOSED) {
                 if (_is_timeout()) {
                     DEBUGV(":wtmo\r\n");
+		                  tcp_abort(_pcb);                 
                 }
                 delete _datasource;
                 _datasource = nullptr;
