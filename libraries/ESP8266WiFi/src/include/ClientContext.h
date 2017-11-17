@@ -536,7 +536,7 @@ private:
 
     DataSource* _datasource = nullptr;
     size_t _written = 0;
-    size_t _write_chunk_size = 256;
+    size_t _write_chunk_size = 2920;//was 256;
     uint32_t _timeout_ms = 5000;
     uint32_t _op_start_time = 0;
     uint8_t _send_waiting = 0;
